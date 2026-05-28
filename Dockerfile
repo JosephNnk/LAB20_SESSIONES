@@ -22,4 +22,4 @@ RUN composer install --no-dev --optimize-autoloader \
 
 EXPOSE 10000
 
-CMD ["sh", "-c", "php -S 0.0.0.0:${PORT:-10000} -t public"]
+CMD ["sh", "/var/www/start.sh"]
