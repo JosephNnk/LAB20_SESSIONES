@@ -18,10 +18,7 @@ COPY . /var/www
 
 RUN composer install --no-dev --optimize-autoloader \
     && npm install \
-    && npm run build \
-    && php artisan config:cache \
-    && php artisan route:cache \
-    && php artisan view:cache
+    && npm run build
 
 EXPOSE 10000
 
